@@ -1,0 +1,9 @@
+<%= form_tag('/search', method: :get) do %>
+	<%= label_tag :username, "Search for:" %>
+	<%= text_field_tag :username %>
+	<%= submit_tag "Search" %>
+<% end %>
+
+<% @photos.each do |photo| %>
+	<%= image_tag photo.url_o %>
+<% end %>
